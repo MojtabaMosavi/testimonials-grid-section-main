@@ -1,0 +1,144 @@
+:root {
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+body {
+  font-size: 0.8125rem;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  min-height: 100vh;
+  max-width: 90rem;
+  min-width: 23.4375rem;
+  background-color: var(--Light-grayish-blue);
+}
+
+.main .container {
+  max-width: 69rem;
+  margin: 2rem auto 0 auto;
+}
+
+.main .container .testimonial {
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+}
+
+/*================Elment================= */
+
+.testimonial__top-section {
+  display: flex;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto;
+  max-width: 69rem;
+  grid-gap: 0 1.5rem;
+}
+
+.container-2col {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 1rem 0;
+}
+.container__a {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 0 1.5rem;
+}
+
+.container__b {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 0 1.5rem;
+}
+.container__1col {
+  max-width: 12rem;
+}
+
+.testimonial__image {
+  border-radius: 1rem;
+  max-width: 2rem;
+  max-height: 2rem;
+  margin-right: 1rem;
+}
+
+.testimonial__name,
+.testimonial__status {
+  display: block;
+}
+
+.testimonial__name {
+  color: var(--White);
+  font-weight: 700;
+}
+
+.testimonial__status {
+  color: var(--Light-gray);
+  font-size: 0.7rem;
+}
+
+/*================Modifiers================= */
+
+.testimonial_violet {
+  background-color: var(--Moderate-violet);
+}
+
+.testimonial_graish-blue {
+  background-color: var(--Very-dark-grayish-blue);
+}
+
+.testimonial_blackish-blue {
+  background-color: var(--Very-dark-blackish-blue);
+}
+
+.testimonial__name_black {
+  color: var(--Very-dark-blackish-blue);
+}
+
+.testimonial_white {
+  background-color: var(--White);
+}
+
+.testimonial_background {
+  background-image: url("images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: 80% 0;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    max-width: 23.4375rem;
+    margin: auto;
+  }
+  .main {
+    margin: 4.43rem 1rem 0 1rem;
+  }
+  .container {
+    max-height: 60rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 2rem 0;
+  }
+  .testimonial {
+    max-width: 20rem;
+  }
+
+  .container-2col {
+    grid-gap: 1rem 0;
+  }
+
+  .container__a,
+  .container__b {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem 0;
+  }
+
+  .container__1col {
+    max-height: 27.5rem;
+  }
+}
